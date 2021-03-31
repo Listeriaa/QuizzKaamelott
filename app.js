@@ -24,10 +24,12 @@ function handleFormSubmit(evt) {
     //je réinitialise le tableau des résultats a chaque submit et le nombre de bonnes réponses
     let results = [];
     numberGoodAnswers = 0;
+    
     //ca récupère les valeurs des input qui ont été checked (selectionnés)
     let input = document.querySelectorAll('input:checked');
     let questionBlockElements = document.querySelectorAll('.question-block');
-
+   
+    
     //je remplis mon tableau results
     for (let index =0 ; index < input.length ; index++){
         results.push(input[index].value);
@@ -42,9 +44,15 @@ function handleFormSubmit(evt) {
         } else {
             questionBlockElements[index].style.backgroundColor="#ffbeb9";
             questionBlockElements[index].classList.add('echec');
+            setTimeout(function() {
+                questionBlockElements[index].classList.remove('echec');
+            }, 500)
         }
+       
     }
+
     showResults(numberGoodAnswers);
+    results=[];
 }
 
 
