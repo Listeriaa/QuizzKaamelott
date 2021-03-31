@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 1-Créer l'interface, les blocs, les boutons
+        2- Styliser le tout
+        3-Récupérer les résultats au click
+        4-Comparer les résultats
+        5- Afficher des phrases en fonction des résultats
+        6-Changer la couleur des blocs + animations en fonction des résultats
+     -->
+     <h1>Quizz Kaamelot !</h1>
+
+     <div class="container-global">
+   
+       <form class="form-quizz">
+   
+             <div class="question-block">
+               <h4>Quel objet légendaire est recherché par nos héros ? </h4>
+               
+               <div>
+                   <input type="radio" id="Clovis" name="q1" value="a" checked>
+                   <label for="Clovis">Le Graal</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="Lincoln" name="q1" value="b">
+                   <label for="Lincoln">une pilule bleue</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="Bonaparte" name="q1" value="c" >
+                   <label for="Bonaparte">la réponse D</label>
+               </div>
+           </div>
+   
+           <div class="question-block">
+               <h4>Qui est à l'origine du "c'est pas faux" ?</h4>
+               <div>
+                   <input type="radio" id="date1" name="q2" value="a" checked>
+                   <label for="date1">Perceval</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="date2" name="q2" value="b">
+                   <label for="date2">Karadoc</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="date3" name="q2" value="c">
+                   <label for="date3">Léodagan</label>
+               </div>
+           </div>
+   
+           <div class="question-block">
+               <h4>Qui a dit : "faut arrêter ces conneries de nord et de sud ! Une fois pour toutes, le nord, suivant comment on est tourné, ça change tout !" ?</h4>
+               <div>
+                   <input type="radio" id="date4" name="q3" value="a" checked>
+                   <label for="date4">Lancelot</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="date5" name="q3" value="b" >
+                   <label for="date5">Arthur</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="date6" name="q3" value="c">
+                   <label for="date6">Perceval</label>
+               </div>
+           </div>
+   
+   
+           <div class="question-block">
+               <h4>Qui a dit : "une fois j’ai pissé par la fenêtre !" ?</h4>
+   
+               <div>
+                   <input type="radio" id="Ljubljana" name="q4" value="a" checked>
+                   <label for="Ljubljana">Arthur</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="Belgrade" name="q4" value="b">
+                   <label for="Belgrade">Guenièvre</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="Bratislava" name="q4" value="c">
+                   <label for="Bratislava">Séli</label>
+               </div>
+           </div>
+   
+   
+           <div class="question-block">
+               <h4>Qui a dit :"Ça prouve que j'ai de l'ubiquité...De l'humilité ? C'est pas quand il y a des infiltrations ?" </h4>
+               <div>
+                   <input type="radio" id="m1" name="q5" value="a"
+                       checked>
+                   <label for="m1">Perceval</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="m2" name="q5" value="b">
+                   <label for="m2">Bohort</label>
+               </div>
+               
+               <div>
+                   <input type="radio" id="m3" name="q5" value="c">
+                   <label for="m3">Karadoc</label>
+               </div>
+           </div>
+   
+           <button type="submit">Validez vos choix !</button>
+       </form>
+   
+       <div id="resultats">
+         <h4>Cliquez sur valider pour voir les résultats.</h4>
+         <p id="aide"></p>
+         <p id="note"></p>
+       </div>
+     </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
