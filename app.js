@@ -73,27 +73,36 @@ function showResults(numberGoodAnswers) {
         case 0:
             h4.textContent = `👎 Peux mieux faire ! 👎`;
             aide.textContent = 'Retentez une autre réponse dans les cases rouges, puis re-validez !';
+            document.getElementById('resultats').style.backgroundColor="#ffbeb9";
             break;
         case 1:
             h4.textContent = `😭 Peux mieux faire ! 😭`
             aide.textContent = 'Retentez une autre réponse dans les cases rouges, puis re-validez !';
+            document.getElementById('resultats').style.backgroundColor="#ffbeb9";
             break;
         case 2:
             h4.textContent = `👀 Il reste quelques erreurs. 😭`;
             aide.textContent = 'Retentez une autre réponse dans les cases rouges, puis re-validez !';
+            document.getElementById('resultats').style.backgroundColor="#ffbeb9";
             break;
         case 3:
             h4.textContent = `✨ Encore un effort ... 👀`
             aide.textContent = 'Retentez une autre réponse dans les cases rouges, puis re-validez !';
+            document.getElementById('resultats').style.backgroundColor="#ffbeb9";
             break;
         case 4:
             h4.textContent = `✨ Vous y êtes presque ! ✨`;
             aide.textContent = 'Retentez une autre réponse dans la case rouge, puis re-validez !';
+            document.getElementById('resultats').style.backgroundColor="#ffbeb9";
             break;
         case 5:
-        h4.textContent = `✔️ Bravo, c'est un sans faute ! ✔️`;       
-        aide.textContent = '';
-        break;
+            h4.textContent = `✔️ Bravo, c'est un sans faute ! ✔️`;       
+            aide.textContent = '';
+            document.getElementById('resultats').style.backgroundColor="#8ade93";
+            break;
+        default:
+            "c'est inattendu";
+            break;
     }
     note.textContent = numberGoodAnswers + '/5';
 }
