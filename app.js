@@ -11,13 +11,42 @@ let numberGoodAnswers=null;
 const form = document.querySelector('.form-quizz');
 form.addEventListener('submit', handleFormSubmit);
 
-
+window.addEventListener('DOMContentLoaded', handleLoadPage);
 let input = document.querySelectorAll('input:checked');
 let aide = document.getElementById('aide');
 let note = document.getElementById('note');
 let h4 = document.querySelector('#resultats h4');
 
+function handleLoadPage(){
+    let ms = 250;
+    
+    var questionBlockElements = document.querySelectorAll('.question-block');
 
+    console.log(questionBlockElements.length);
+    for (let i=0 ; i < questionBlockElements.length ; i++){
+        
+        setTimeout(function() {
+            questionBlockElements[i].classList.remove("ishidden");
+            questionBlockElements[i].classList.add("scale");
+        }, ms)
+        ms+=250;
+        console.log(ms);
+        
+        setTimeout(function() {
+            questionBlockElements[i].classList.remove("scale");
+            
+        }, 2500)
+        
+     } 
+     setTimeout(function() {
+         document.querySelector("button").classList.remove("ishidden");
+        document.querySelector("button").classList.add("scale");
+     }, 1750)
+     setTimeout(function() {
+     document.querySelector("#resultats").classList.remove("ishidden");
+     document.querySelector("#resultats").classList.add("scale");
+    }, 2000)
+}
 
 function handleFormSubmit(evt) {
     evt.preventDefault();
@@ -106,3 +135,4 @@ function showResults(numberGoodAnswers) {
     }
     note.textContent = numberGoodAnswers + '/5';
 }
+

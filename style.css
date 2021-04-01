@@ -9,8 +9,9 @@ body {
     font-family: 'Lato', sans-serif;
     font-family: 'Russo One', sans-serif;
     text-align: center;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(99,122,236,1) 100%);
+    background-image: url("./bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
@@ -33,9 +34,13 @@ h1 {
     width: 80%;
     border: 1px solid grey;
     border-radius: 10px;
-    box-shadow: 3px 2px 8px 3px rgb(138,138,138,0.64);
+    box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.75);
     margin : 20px auto;
     padding : 10px;
+    
+}
+.ishidden {
+    display: none;
 }
 
 h4{
@@ -64,8 +69,10 @@ form button {
     transition: all 0.2s ease-in-out;
 }
 form button:hover {
-    background-color: rgba(99,122,236,0.5);
-    transform: perspective(3cm) translateZ(3px);
+    background-color: rgb(19, 19, 19);
+    
+    color:#fff;
+
     
 }
 #resultats{
@@ -73,6 +80,21 @@ form button:hover {
 }
 .echec {
     animation: echec 0.3s ease-in-out;
+}
+.scale {
+    
+    animation : scale 0.8s ease-out;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+        
+    }
+    100% {
+        transform: scale(1);
+       
+    }
 }
 
 @keyframes echec {
