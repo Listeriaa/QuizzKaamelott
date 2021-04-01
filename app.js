@@ -34,7 +34,8 @@ function handleLoadPage(){
         
         setTimeout(function() {
             questionBlockElements[i].classList.remove("scale");
-            
+            document.querySelector("button").classList.remove("scale");
+            document.querySelector("#resultats").classList.remove("scale");
         }, 2500)
         
      } 
