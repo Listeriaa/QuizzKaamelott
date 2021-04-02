@@ -16,6 +16,7 @@ const app = {
     form : document.querySelector('.form-quizz'),
 
     init : function() {
+        window.addEventListener('DOMContentLoaded', app.handleLoadPage);
         app.form.addEventListener('submit', app.handleFormSubmit);
     },
 
@@ -24,7 +25,6 @@ const app = {
             
             var questionBlockElements = document.querySelectorAll('.question-block');
         
-            console.log(questionBlockElements.length);
             for (let i=0 ; i < questionBlockElements.length ; i++){
                 
                 setTimeout(function() {
@@ -59,20 +59,19 @@ const app = {
         app.numberGoodAnswers=0;
         let input = document.getElementsByTagName('input');
         let inputChecked = [];
-        console.log(input);
+        
         for (let index =0 ; index < input.length ; index++){
             if (input[index].checked === true){
             inputChecked.push(input[index].value);
             }
         }
-        console.log(inputChecked);
+        
         if (inputChecked.length !== app.reponses.length) {
-            alert("Il faut répondre à toutes les questions ;)");
+            app.addModal();
         } else {
             for (let index in inputChecked) {
                 let isOK = app.checkAnswers(inputChecked[index], app.reponses[index]);
-                console.log(isOK);
-                console.log(app.numberGoodAnswers);
+                
                 if (isOK) {
                     app.questionBlockElements[index].style.backgroundColor="#8ade93";
     
@@ -88,6 +87,25 @@ const app = {
         }
         inputChecked=[];
         
+    },
+    addModal: function(){
+        let modal = document.getElementsByClassName('modal');
+        let mainContainer = document.getElementById('main-container');
+        
+        modal[0].classList.remove("is-hidden");
+        modal[0].classList.add("is-shown");
+        mainContainer.classList.add("is-blurred");
+
+        let close = document.getElementById("close");
+        close.addEventListener('click', (() => {
+            modal[0].classList.add("is-hidden");
+            modal[0].classList.remove("is-shown");
+            mainContainer.classList.remove("is-blurred");}));
+
+        window.addEventListener('click', (() => {
+            modal[0].classList.add("is-hidden");
+            modal[0].classList.remove("is-shown");
+            mainContainer.classList.remove("is-blurred");}));
     },
 
     checkAnswers: function(answers, userAnswers) {
@@ -140,4 +158,4 @@ const app = {
     }
 }
 document.addEventListener('DOMContentLoaded', app.init);
-window.addEventListener('load', app.handleLoadPage);
+
