@@ -157,5 +157,12 @@ const app = {
         app.note.textContent = numberGoodAnswers + '/5';
     }
 }
+//foreach pour attribuer un evenement qui appelle une fonction anonyme
+app.questionBlockElements.forEach(element => {
+    element.addEventListener('click', () =>{
+        element.style.backgroundColor = "#fff";
+    })
+})
+
 document.addEventListener('DOMContentLoaded', app.init);
 
