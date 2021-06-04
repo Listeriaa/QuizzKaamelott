@@ -1,14 +1,14 @@
 # 1- Quizz Kaamelott
 
-This is the 1st of the 20 Javascript projects I plan to code.
+This is a simple project I made to practice Javascript.
 (https://listeriaa.github.io/QuizzKaamelott/)
 
 ## Who I am
 
-Currently in a dev web bootcamp since 1 month, I want to continue practicing on Javascript.
+Currently in a dev web bootcamp since 1 month, I wanted to carry on practicing on Javascript even if I'm planning to specialize in back-end.
 
 ## What I learned
 
 setTimeOut, modal window, listeners, DOM manipulation...
 
-## 
+ 
