@@ -11,4 +11,8 @@ Currently in a dev web bootcamp since 1 month, I wanted to carry on practicing o
 
 setTimeOut, modal window, listeners, DOM manipulation...
 
+## Next Step
+
+I will fetch the questions from an API, in order to get a different quizz each time.
+
  
